@@ -1,19 +1,61 @@
 import numpy as np
 
-a = np.arange(10).reshape(2, 5)
-print(a)
+# a = np.arange(10).reshape(2, 5)
+# print(a)
 
-#2d array
-a = np.array([[1,2,3], [4,5,6]])
-print(a)
+# #2d array
+# a = np.array([[1,2,3], [4,5,6]])
+# print(a)
 
-a = np.zeros((3,3))
-print(a)
+# a = np.zeros((3,3))
+# print(a)
 
-a = np.ones((3,4))
-print(a)
-a = np.ones((2,3,4))
-print(a.shape)
+# a = np.ones((3,4))
+# print(a)
+# a = np.ones((2,3,4))
+# print(a.shape)
 
-a = np.arange(10,30,5)
-print(a)
+# a = np.arange(10,30,5)
+# print(a)
+
+#slicing and indexing
+
+# a = np.array=([1,2,3])
+# slicing = a[0:2]
+# print(slicing)
+
+# a = np.array=([1,2,3])
+# slicing = a[:-1]
+# print(slicing)
+
+# #2D arrays
+
+# a = np.arange(15).reshape(3,5)
+# print(a)
+
+# #a[row_slice, col_slice]
+
+# slicing = a[0:2,1:4]
+# #a[1,3]
+# print(slicing)
+
+# a[1,3] = 6
+# print(a)
+
+# a = np.arange(10)
+# print(a)
+
+# #Rule: 2D mein a[x] ka matlab hamesha a[x, :] hota hai. Columns pe kuch karna ho to comma ke baad likho: a[:, 1:4].
+# #a[x:y] means rows columns will be selected a[x:y, x:y] means rows and columns will be selected. a[x:y, :] means rows will be selected and all columns will be selected. a[:, x:y] means all rows will be selected and columns will be selected.
+
+# divisible_by_2 = a[a%2!=0]
+# print(divisible_by_2)
+
+# c = a[(a > 2) & (a < 11)]
+# print(c)
+
+# five_up = (a > 5) | (a == 5)
+# print(five_up)
+
+M= np.array([[1,2,3],[4,5,6]])
+print( M + 100)

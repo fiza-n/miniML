@@ -1,0 +1,1 @@
+sqrt(sum(diff**2,axis=-1))

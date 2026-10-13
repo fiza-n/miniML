@@ -1,4 +1,6 @@
+from numpy import array, argmin, sqrt, sum
 import numpy as np
+import time
 
 # a = np.arange(10).reshape(2, 5)
 # print(a)
@@ -59,3 +61,29 @@ import numpy as np
 
 M= np.array([[1,2,3],[4,5,6]])
 print( M + 100)
+
+#VECTOR QUANTIZATION EXAMPLE
+# observation = array([111.0, 188.0])
+# codes = array([[102.0, 203.0],
+#                [132.0, 193.0],
+#                [45.0, 155.0],
+#                [57.0, 173.0]])
+# diff = codes - observation    # the broadcast happens here
+# dist = sqrt(sum(diff**2,axis=-1))
+# argmin(dist)
+
+a = np.arange(1000000)
+t= time.time()
+for i in range(a.size):
+    a[i] = a[i]**2
+print("Time taken for for loop: ", time.time()-t)
+
+a = np.arange(1000000)
+t=time.time()
+a = a**2
+print("Time taken for vectorized operation: ", time.time()-t)
+print(a.dtype)
+
+a = np.arange(10)
+even = a[a%2==0]
+print(even)
